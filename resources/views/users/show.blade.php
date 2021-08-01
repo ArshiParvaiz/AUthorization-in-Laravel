@@ -37,5 +37,16 @@
             @endif
         </div>
     </div>
+    
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Permissions:</strong>
+            @if(!empty($user->getPermissionNames()))
+                @foreach($user->getPermissionNames() as $v)
+                    <label class="badge badge-success">{{ $v }}</label>
+                @endforeach
+            @endif
+        </div>
+    </div>
 </div>
 @endsection
